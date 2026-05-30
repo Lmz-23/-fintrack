@@ -15,7 +15,13 @@
     "productName": "FinTrack",
     "win": {
       "target": "nsis"
-    }
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "node_modules/**",
+      "package.json"
+    ]
   },
   "dependencies": {
     "better-sqlite3": "^12.10.0",
