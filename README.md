@@ -1,16 +1,81 @@
-# React + Vite
+# FinTrack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.0.0-blue" alt="version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
+  <img src="https://img.shields.io/badge/platform-Windows-blue" alt="platform">
+</p>
 
-Currently, two official plugins are available:
+Aplicación de escritorio para gestión de finanzas personales. Controla tus cuentas, bolsillos, gastos e ingresos con una interfaz moderna y rápida.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Características
 
-## React Compiler
+- **Dashboard** - Resumen visual de tus finanzas con gráficos interactivos
+- **Cuentas** - Gestión de cuentas bancarias y efectivo
+- **Bolsillos** - Divide tu dinero en categorías de ahorro
+- **Gastos** - Registro y categorización de gastos
+- **Ingresos** - Control de entradas de dinero
+- **Historial** - Registro completo de todas las transacciones
+- **Atajos de teclado** - Navegación rápida (D, G, N, H)
+- **Base de datos local** - SQLite para almacenamiento offline seguro
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19 + Vite 8
+- **Backend**: Electron 39
+- **Base de datos**: better-sqlite3
+- **Gráficos**: Recharts
+- **Fechas**: date-fns
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Requisitos previos
+
+- Node.js 18+
+- npm 9+
+- Windows 10/11
+
+## Instalación
+
+```bash
+# Clonar el repositorio
+git clone <repo-url>
+cd fintrack
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+```
+
+## Atajos de teclado
+
+| Tecla | Acción |
+|-------|--------|
+| `D` | Dashboard |
+| `N` | Nuevo registro |
+| `G` | Gastos |
+| `H` | Historial |
+
+## Estructura del proyecto
+
+```
+fintrack/
+├── electron/          # Proceso principal de Electron
+│   ├── main.js       # Punto de entrada
+│   └── preload.js    # Precarga de APIs
+├── src/
+│   ├── components/   # Componentes reutilizables
+│   ├── hooks/        # Custom hooks (useDB, useToast)
+│   ├── pages/        # Vistas de la aplicación
+│   ├── App.jsx       # Componente principal
+│   └── main.jsx      # Entry point
+├── dist/             # Build de producción
+└── package.json      # Dependencias y scripts
+```
+
+## Licencia
+
+MIT
